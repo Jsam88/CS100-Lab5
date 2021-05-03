@@ -18,5 +18,6 @@ class Select_contains: public select {
 				return true;
 			}	 
 		}
+}
 		return 1;
 #endif
