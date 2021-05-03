@@ -4,13 +4,15 @@
 #include "gtest/gtest.h"
 #include "select.hpp"
 #include "spreadsheet.hpp"
+#include "Select_Contains.hpp"
+#include "Select_Not.hpp"
 #include <string>
 #include <sstream>
 
 TEST(SpreadsheetTest, emptySheet) { //base case of empty sheet
     Spreadsheet sheet;
-    std::striingstream ss;
-    sheet.pring_selection(ss);
+    std::stringstream ss;
+    sheet.print_selection(ss);
     std::string test = ss.str();
     EXPECT_EQ(test, "");
 }
@@ -28,7 +30,7 @@ TEST(SelectContainsTest, lowercaseTest) {
     std::stringstream ss;
     sheet.print_selection(ss);
     std::string test = ss.str();
-    EXPECT_EQ(test, "apple \n apples \n Snapple \n")
+    EXPECT_EQ(test, "apple \n apples \n Snapple \n");
 }
 
 #endif
