@@ -1,4 +1,5 @@
 #include "spreadsheet.hpp"
+#include "Select_Tests.hpp"
 
 #include "gtest/gtest.h"
 
