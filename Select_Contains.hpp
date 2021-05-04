@@ -1,6 +1,5 @@
 #ifndef __SELECT_CONTAINS_HPP__
 #define __SELECT_CONTAINS_HPP__
-
 #include "select.hpp"
 #include "spreadsheet.hpp"
 #include <string>
@@ -13,11 +12,11 @@ class Select_Column;
 
 class Select_Contains: public Select{
 
-protected: //variables of the substring to look for, the column name(from parent class Select_Column), and spreadsheet
+protected:
 	std::string tarName;
     	const Spreadsheet* userSheet;
     	int column;
-public: //contains construct, destructor and uses of derived functions
+public:
 
         Select_Contains(const Spreadsheet* sheet, const std::string& col_name, const std::string& name){
    		column = sheet->get_column_by_name(col_name);
