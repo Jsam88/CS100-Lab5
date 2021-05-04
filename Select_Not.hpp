@@ -11,11 +11,11 @@ protected:
 	Select *contains;
 public:
 
-	Select_Not(Select* select_contains) {
-		contains = select_contains;
+	Select_Not(Select* selectCon) {
+		contains = selectCon;
 	}
 
-	bool select(const Spreadsheet* sheet, int row) const{
+	virtual bool select(const Spreadsheet* sheet, int row) const{
 		if (contains -> select(sheet,row) == true) {
 			return false;
 		}

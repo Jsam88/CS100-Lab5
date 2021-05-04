@@ -3,11 +3,6 @@
 
 #include <cstring>
 
-#include "Select_Contains.hpp"
-#include "Select_Not.hpp"
-//#include "Select_And.hpp"
-//#include "Select_Or.hpp"
-
 class Select
 {
 public:
@@ -18,12 +13,12 @@ public:
 };
 
 // A common type of criterion for selection is to perform a comparison based on
-// the contents of one column.  This class contains contains the logic needed
-// for dealing with columns. Note that this class is also an abstract base
-// class, derived from Select.  It introduces a new select function (taking just
-// a string) and implements the original interface in terms of this.  Derived
-// classes need only implement the new select function.  You may choose to
-// derive from Select or Select_Column at your convenience.
+// // the contents of one column.  This class contains contains the logic needed
+// // for dealing with columns. Note that this class is also an abstract base
+// // class, derived from Select.  It introduces a new select function (taking just
+// // a string) and implements the original interface in terms of this.  Derived
+// // classes need only implement the new select function.  You may choose to
+// // derive from Select or Select_Column at your convenience.
 class Select_Column: public Select
 {
 protected:
@@ -38,7 +33,6 @@ public:
     {
         return select(sheet->cell_data(row, column));
     }
-
     // Derived classes can instead implement this simpler interface.
     virtual bool select(const std::string& s) const = 0;
 };

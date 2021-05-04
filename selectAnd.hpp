@@ -22,7 +22,7 @@ public:
 		delete location2;
 	}
 
-	bool select(const Spreadsheet* sheet, int row) const{
+	virtual bool select(const Spreadsheet* sheet, int row) const{
 		if (location1->select(sheet,row) == true && location2->select(sheet, row) == true) {
 			return true;
 		}

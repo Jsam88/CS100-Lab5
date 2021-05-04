@@ -6,6 +6,8 @@
 #include "spreadsheet.hpp"
 #include "Select_Contains.hpp"
 #include "Select_Not.hpp"
+#include "selectAnd.hpp"
+#include "selectOr.hpp"
 #include <string>
 #include <sstream>
 
